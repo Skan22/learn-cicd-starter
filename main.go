@@ -91,12 +91,12 @@ func main() {
 
 	router.Mount("/v1", v1Router)
 	srv := &http.Server{
-		Addr:    ":" + port,
-		Handler: router,
-		ReadHeaderTimeout : 5*time.Second,
+		Addr:              ":" + port,
+		Handler:           router,
+		ReadHeaderTimeout: 5 * time.Second,
 	}
-	safeport := strings.ReplaceAll(port,"\n","")
-	safeport = strings.ReplaceAll(safeport,"\r","")
+	safeport := strings.ReplaceAll(port, "\n", "")
+	safeport = strings.ReplaceAll(safeport, "\r", "")
 	log.Printf("Serving on port: %s\n", safeport)
 	log.Fatal(srv.ListenAndServe())
 }
