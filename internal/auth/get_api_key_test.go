@@ -12,7 +12,7 @@ func Test_api_key(t *testing.T) {
 	if err != nil {
 		t.Errorf("expected error to be %v , got  : %v", nil, err)
 	}
-	if apiKey != "ezfhiaeohioaf&é1365_dffez" {
+	if apiKey != "ezfhiaeohioaf&é1365" {
 		t.Errorf("expected %s , got : %s", "ezfhiaeohioaf&é1365", apiKey)
 	}
 
